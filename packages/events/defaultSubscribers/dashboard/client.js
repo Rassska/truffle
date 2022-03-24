@@ -2,9 +2,12 @@ const {
   connectToMessageBusWithRetries,
   createMessage,
   getMessageBusPorts,
-  sendAndAwait,
-  MessageBusConnectionError
+  sendAndAwait
 } = require("@truffle/dashboard-message-bus");
+
+const {
+  MessageBusConnectionError
+} = require("@truffle/dashboard-message-bus-common");
 
 module.exports = class DashboardMessageBusClient {
   constructor(config) {
